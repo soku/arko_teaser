@@ -1,0 +1,161 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+    margin:0;
+    padding:0;
+}
+
+.logo {
+    width: 116px;
+    height: 40px;
+    display: block;
+    text-indent: -9999px;
+    background: url(../js/arko_logo.png) no-repeat center;
+    margin:auto;
+}
+
+h2, h4 {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    color: #140930;
+    color: color(display-p3 0.0736 0.0386 0.1787);
+    text-align: center;
+    font-size: 2.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: stretch;
+}
+
+h4 {
+    color: #000;
+    color: color(display-p3 0 0 0);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 125% */
+    opacity: 0.4;
+    
+}
+
+#background {
+    width: 100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    object-fit: cover;
+    z-index: -99;
+}
+
+.container {
+    
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    width: 449px;
+    min-width: 320px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+
+}
+
+
+
+.small h2 {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.small h4 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px color(display-p3 0 0 0 / 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 125% */
+}
+
+div.shortform {position: relative; height: 710px; width: 360px; display: flex; justify-content: center; align-items: center;} 
+div.shortform::after {
+    display: block;
+    content:"";
+    position: absolute;
+    background: url(../js/phone_frame.png) no-repeat center;
+    width: 360px;
+    height: 100%;
+    top:0px;
+    left: 0px;
+    z-index: -8;
+}
+.small video {
+    width: 301px;
+    height: 649px;
+    object-fit: cover;
+    border-radius: 45px;
+ }
+
+.container.blur {
+    background: rgba(255, 255, 255, 0.25);
+    background: color(display-p3 1 1 1 / 0.25);
+    backdrop-filter: blur(10px);
+}
+
+div.fp-watermark {display: none !important;} 
+
+@media screen and (max-width: 720px) {
+    :root {
+        font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .box {
+        gap:16px;
+    }
+
+    .small a.logo {display: none;}
+  }
+
+  @media screen and (max-height: 750px) {
+    div.shortform {
+        height: 480px; 
+        width: 360px;
+    } 
+
+    div.shortform::after {
+        background: url(../js/phone_frame.png) no-repeat center;
+        background-size: contain;
+        background-position: center;
+        width: 360px;
+        height: 100%;
+        top:0px;
+        z-index: -8;
+        
+    }
+
+    .small video {
+        width: 203px;
+        height: 439px;
+        border-radius: 28px;
+     }
+  }
+
+
